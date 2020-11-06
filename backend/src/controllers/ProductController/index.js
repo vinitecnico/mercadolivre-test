@@ -12,8 +12,9 @@ const getByTerm = async (req, res) => {
 
 const getByProductId = async (req, res) => {
   try {
-    // res.status(200).send(await search(req.query.q));
-    res.status(200).send([1, 2, 3]);
+    // res.status(200).send(await search(req.params.id));
+    const data = await productClient.getByProductId(req.params.id)
+    res.status(200).send(data);
   } catch (error) {
     res.status(error.status).send(error);
   }
