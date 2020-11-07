@@ -38,8 +38,8 @@ const responseProductDetails = (
 
   return {
     author: {
-      name: "Vendedor",
-      lastname: "Mercado Livre",
+      name: "Mercado Livre",
+      lastname: "test frontEnd",
     },
     item: {
       id: detailProduct.id,
