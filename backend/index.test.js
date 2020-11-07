@@ -13,7 +13,7 @@ describe('index aplication', () => {
 
     test('should response error call /api/items no send paramets', async () => {
         const response = await request(index).get('/api/items')
-        expect(response.statusCode).toBe(200)
+        expect(response.statusCode).toBe(500)
     })
 
     test('should response with an object of product', async () => {
