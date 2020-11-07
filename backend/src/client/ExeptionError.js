@@ -1,4 +1,4 @@
-class StandardError {
+class ExeptionError {
 
     constructor(status, message, typeError) {
         this.status = status
@@ -8,4 +8,4 @@ class StandardError {
 
 }
 
-module.exports = { StandardError }
+module.exports = { ExeptionError }
