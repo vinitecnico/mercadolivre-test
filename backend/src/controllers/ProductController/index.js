@@ -15,7 +15,7 @@ const getByProductId = async (req, res) => {
     const data = await productClient.getByProductId(req.params.id)
     res.status(statusCode.OK).send(data);
   } catch (error) {
-    res.status(error.status).send(error);
+    res.status(statusCode.INTERNAL_SERVER_ERROR).send(error.message || error);
   }
 };
 
