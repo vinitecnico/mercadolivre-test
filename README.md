@@ -3,9 +3,9 @@
 Install reference backend project, start and test
 
 ````
+  cd backend
   npm install
   npm start
-  npm test
 ````
 
 # Return product by name
@@ -18,4 +18,11 @@ Install reference backend project, start and test
 
 ````
   http://localhost:5000/api/items/MLB1702233298
+````
+
+# Run test coverage
+
+````
+  cd backend
+  npm test
 ````
