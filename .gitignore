@@ -1,3 +1,4 @@
 /backend/node_modules
 /backend/launch.json
 /backend/package-lock.json
+/backend/coverage
