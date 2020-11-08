@@ -1,5 +1,5 @@
 import Header from './header'
-import SearchField from './SearchField'
+import SearchField from './searchField'
 import Content from './content'
 
 export {

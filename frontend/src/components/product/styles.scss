@@ -1,0 +1,68 @@
+@import '../../../scss/effects.scss';
+@import '../../../scss/variables.scss';
+
+.product-body {
+    width: 100%;
+    padding: 0 16px;
+    height: 212px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid $tertiary-font-color;
+    cursor: pointer;
+
+    &:first-of-type {
+        border-top-left-radius: $default-border-radius;
+        border-top-right-radius: $default-border-radius;
+    }
+
+    &:last-of-type {
+        border-top-left-radius: $default-border-radius;
+        border-top-right-radius: $default-border-radius;
+        border: none;
+    }
+    
+
+    &:hover {
+        background-color: #fbfbfb;
+    }
+
+    @include fade-colors;
+
+    .product-info {
+        margin-left: 16px;
+
+        .product-info-name {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .product-info-amount {
+            margin: 0;
+            margin-bottom: 32px;
+            font-size: 24px;
+        }
+
+        .product-info-free-shipping {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .product {
+        padding-top: 10px;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+
+        .product-info {
+            text-align: center;
+            margin: 15px 0;
+        }
+    }
+}
