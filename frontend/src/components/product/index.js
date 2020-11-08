@@ -2,8 +2,9 @@ import React from "react";
 import IconFreeShipping from "../iconFreeShipping";
 import "./styles.scss";
 
-const Product = ({ item, ...props }) => {
+const Product = ({ item, handleChooseProduct, ...props }) => {
   const {
+    id,
     picture,
     title,
     price: { amount, decimals },
@@ -11,7 +12,7 @@ const Product = ({ item, ...props }) => {
   } = item;
 
   return (
-    <section className="product-body">
+    <section className="product-body" onClick={() => handleChooseProduct(id)}>
         <section className="thumbnail">
           <img src={picture} title={title} alt={title} />
         </section>

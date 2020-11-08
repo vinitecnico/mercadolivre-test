@@ -12,8 +12,7 @@ const getByTerm = async (req, res) => {
 
 const getByProductId = async (req, res) => {
   try {
-    const data = await productClient.getByProductId(req.params.id)
-    res.status(statusCode.OK).send(data);
+    res.status(statusCode.OK).send(await productClient.getByProductId(req.params.id));
   } catch (error) {
     res.status(error.status ? error.status : statusCode.INTERNAL_SERVER_ERROR).send(error.message || error);
   }
