@@ -1,5 +1,5 @@
-@import '../../../scss/effects.scss';
-@import '../../../scss/variables.scss';
+@import '../../scss/effects.scss';
+@import '../../scss/variables.scss';
 
 .product-body {
     width: 100%;
@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: $main-background-color;
     border-bottom: 1px solid $tertiary-font-color;
     cursor: pointer;
 
@@ -28,6 +29,17 @@
     }
 
     @include fade-colors;
+
+    .thumbnail {
+
+        img {
+            width: 180px;
+            height: 180px;
+    
+            border-radius: $default-border-radius;
+        }
+    
+    }
 
     .product-info {
         margin-left: 16px;
