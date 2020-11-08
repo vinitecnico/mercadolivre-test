@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Content, Product, Breadcrumbs } from "../../components";
+import { Content, Breadcrumbs, Product } from "../../components";
 import client from "../../clients";
 
 const ProductList = ({ location, history }) => {
