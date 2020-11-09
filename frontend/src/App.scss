@@ -40,3 +40,16 @@ body {
       }
   }
 }
+
+.home-body {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .home-body-title {
+      text-align: center;
+      font-size: 2em;
+      color: #333333;
+  }
+}

@@ -5,6 +5,7 @@ import Content from './content'
 import Breadcrumbs from './breadcrumbs'
 import Product from './product'
 import ProductDetail from './productDetail'
+import Loading from './loading'
 
 export {
     Header,
@@ -14,4 +15,5 @@ export {
     Breadcrumbs,
     Product,
     ProductDetail,
+    Loading
 }

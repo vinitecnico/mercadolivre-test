@@ -1,26 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { Content, Breadcrumbs, ProductDetail } from "../../components";
+import { Content, Breadcrumbs, ProductDetail, Loading } from "../../components";
 import { getByProductId } from "../../clients";
 
 const ProductDetails = ({ match }) => {
   const { id } = match.params;
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState({ loading: false });
 
   useEffect(async () => {
+    setProduct({ loading: true, ...product });
     init();
   }, []);
 
   const init = async () => {
     const result = await getByProductId(id);
-    setProduct(result.data);
+    setProduct({ loading: false, ...result.data });
   };
 
   return (
     <>
       <Content>
-        {product && product.item && product.item.categories && (
+        {product.loading && <Loading />}
+        {!product.loading && product && product.item && product.item.categories && (
           <>
-            <Breadcrumbs crumbs={product && product.item.categories ? product.item.categories :  [] } />
+            <Breadcrumbs
+              crumbs={
+                product && product.item.categories
+                  ? product.item.categories
+                  : []
+              }
+            />
             <ProductDetail product={product} />
           </>
         )}
