@@ -1,13 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import searchIcon from "../../assets/ic_Search.png";
 import history from "../../history";
 import './styles.scss'
 
 const SearchField = ({ ...props }) => {
   const buttonRef = useRef(null);
-  //   const termStore = useSelector((store) => store.products.term);
   const [term, setTerm] = useState();
-  //const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setTerm(e.target.value);
@@ -19,12 +17,7 @@ const SearchField = ({ ...props }) => {
 
   const handleSearch = () => {
     history.push(`/items?q=${encodeURIComponent(term)}`);
-    //dispatch(searchRequest(term));
   };
-
-  // useEffect(() => {
-  //     setTerm(termStore)
-  // }, [termStore, setTerm])
 
   return (
     <section className="search-field">
@@ -47,13 +40,5 @@ const SearchField = ({ ...props }) => {
     </section>
   );
 };
-
-// SearchField.propTypes = {
-//     value: PropTypes.string,
-// }
-
-// SearchField.defaultValue = {
-//     value: "",
-// }
 
 export default SearchField;
