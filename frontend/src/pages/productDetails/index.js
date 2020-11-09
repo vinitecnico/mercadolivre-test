@@ -6,32 +6,29 @@ const ProductDetails = ({ match }) => {
   const { id } = match.params;
   const [product, setProduct] = useState({ loading: false });
 
-  useEffect(async () => {
-    setProduct({ loading: true, ...product });
+  useEffect(() => {
+    setProduct({ loading: true });
     init();
   }, []);
 
   const init = async () => {
     const result = await getByProductId(id);
-    setProduct({ loading: false, ...result.data });
+    setProduct({ ...result.data, loading: false });
   };
 
   return (
     <>
       <Content>
         {product.loading && <Loading />}
-        {!product.loading && product && product.item && product.item.categories && (
-          <>
-            <Breadcrumbs
-              crumbs={
-                product && product.item.categories
-                  ? product.item.categories
-                  : []
-              }
-            />
-            <ProductDetail product={product} />
-          </>
-        )}
+        {!product.loading &&
+          product &&
+          product.item &&
+          product.item.categories && (
+            <>
+              <Breadcrumbs crumbs={product.item.categories} />
+              <ProductDetail product={product} />
+            </>
+          )}
       </Content>
     </>
   );

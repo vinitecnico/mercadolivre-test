@@ -12,13 +12,13 @@ const ProductList = ({ location, history }) => {
   }
 
   useEffect(async () => {
-    setProducts({ loading: true, ...products });
+    setProducts({ ...products, loading: true });
     init();
   }, [q]);
 
   const init = async () => {
     const result = await getByTerm(q);
-    setProducts({ loading: false, ...result.data });
+    setProducts({ ...result.data, loading: false });
   };
 
   const handleChooseProduct = (idProduct) => {

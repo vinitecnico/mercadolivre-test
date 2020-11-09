@@ -1,11 +1,16 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import searchIcon from "../../assets/ic_Search.png";
 import history from "../../history";
-import './styles.scss'
+import "./styles.scss";
 
 const SearchField = ({ ...props }) => {
   const buttonRef = useRef(null);
   const [term, setTerm] = useState();
+  
+  useEffect(() => {
+    console.log(history.location)
+    if (history.location.pathname === "/") setTerm();
+  }, [history.location.pathname]);
 
   const handleChange = (e) => {
     setTerm(e.target.value);
