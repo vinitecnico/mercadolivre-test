@@ -8,7 +8,6 @@ const SearchField = ({ ...props }) => {
   const [term, setTerm] = useState();
   
   useEffect(() => {
-    console.log(history.location)
     if (history.location.pathname === "/") setTerm();
   }, [history.location.pathname]);
 
