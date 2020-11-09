@@ -1,5 +1,5 @@
 import React from "react";
-import SearchField from '../searchField1'
+import SearchField from '../searchField'
 import logo from "../../assets/Logo_ML.png";
 import history from '../../history'
 import './styles.scss'

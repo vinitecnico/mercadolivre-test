@@ -1,6 +1,6 @@
 import Header from './header'
 import Button from './button'
-import SearchField from './searchField1'
+import SearchField from './searchField'
 import Content from './content'
 import Breadcrumbs from './breadcrumbs'
 import Product from './product'
