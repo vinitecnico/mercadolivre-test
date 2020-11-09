@@ -1,4 +1,4 @@
-# mercadolivre-test
+# Mercadolivre test
 
 Install reference backend project, start and test
 
@@ -25,4 +25,12 @@ Install reference backend project, start and test
 ````
   cd backend
   npm test
+````
+
+# Install reference frontend project and start
+
+````
+  cd frontend
+  yarn
+  yarn start
 ````
