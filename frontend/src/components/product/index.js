@@ -12,7 +12,8 @@ const Product = ({ item, handleChooseProduct, ...props }) => {
   } = item;
 
   return (
-    <section className="product-body" onClick={() => handleChooseProduct(id)}>
+    <section className="product-items">
+      <section className="product-body" onClick={() => handleChooseProduct(id)}>
         <section className="thumbnail">
           <img src={picture} title={title} alt={title} />
         </section>
@@ -26,6 +27,7 @@ const Product = ({ item, handleChooseProduct, ...props }) => {
           </h2>
           <h3 className="product-info-name">{title}</h3>
         </section>
+      </section>
     </section>
   );
 };
