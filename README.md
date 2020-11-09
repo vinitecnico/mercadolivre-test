@@ -27,7 +27,7 @@ Install reference backend project, start and test
   npm test
 ````
 
-# Install reference frontend project, start
+# Install reference frontend project and start
 
 ````
   cd frontend
