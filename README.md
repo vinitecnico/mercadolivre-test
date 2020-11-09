@@ -26,3 +26,11 @@ Install reference backend project, start and test
   cd backend
   npm test
 ````
+
+Install reference frontend project, start
+
+````
+  cd frontend
+  yarn
+  yarn start
+````
